@@ -8,4 +8,8 @@ DATASETS:
   BATCH_CONTENTS: ("labeled_strong", )
 EMA:
   ENABLED: True
+  LOAD_FROM_EMA_ON_START: False
 OUTPUT_DIR: "output/xc/xc_strongaug_ema/"
+SOLVER:
+  AMP:
+    ENABLED: False
