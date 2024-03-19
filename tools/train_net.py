@@ -26,6 +26,7 @@ def setup(args):
 
     ## Change here
     add_da_config(cfg)
+    # cfg.MODEL.DEVICE = 'cpu'
     ## End change
 
     cfg.merge_from_file(args.config_file)
