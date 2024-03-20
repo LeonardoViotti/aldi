@@ -2,6 +2,7 @@ _BASE_: "Base-RCNN-FPN.yaml"
 MODEL:
   ROI_HEADS:
     NUM_CLASSES: 21
+  DEVICE: "cpu"
 DATASETS:
   TRAIN: ("xc_train",)
   TEST: ("xc_val",)
