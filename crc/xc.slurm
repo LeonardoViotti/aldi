@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=dmixup-3000
-#SBATCH --output=out/crc-7-dmixup-3000.out
+#SBATCH --job-name=aldi-test
+#SBATCH --output=out/aldi-test.out
 #SBATCH --time=1-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=10
@@ -11,7 +11,7 @@
 #SBATCH --mem=100G
 
 module purge
-module load python/ondemand-jupyter-python3.9
+module load pytorch/2.0.1_cuda11.8 gcc/5.4.0
 
 source activate /bgfs/jkitzes/let110/envs/aldi
 
