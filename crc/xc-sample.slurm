@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=aldi-Base-XC
-#SBATCH --output=out/aldi-Base-XC.out
+#SBATCH --job-name=aldi-test
+#SBATCH --output=out/aldi-test.out
 #SBATCH --time=1-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=10
@@ -15,4 +15,4 @@ module load pytorch/2.0.1_cuda11.8 gcc/5.4.0
 
 source activate /bgfs/jkitzes/let110/envs/aldi
 
-python -i tools/train_net.py --config configs/Base-XC-FPN.yaml
+python -i tools/train_net.py --config configs/Base-XC-FPN-sample.yaml
