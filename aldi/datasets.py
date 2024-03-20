@@ -24,3 +24,7 @@ register_coco_instances("cfc_channel_test",   {},         "datasets/cfc/coco_lab
 # XC
 register_coco_instances("xc_train", {}, "datasets/xc/annotations/xc-train.json", "datasets/xc/images/train/")
 register_coco_instances("xc_val", {}, "datasets/xc/annotations/xc-val.json", "datasets/xc/images/val/")
+
+# XC small sample
+register_coco_instances("xc_sample_train", {}, "datasets/xc-sample/annotations/xc-train.json", "datasets/xc-sample/images/train/")
+register_coco_instances("xc_sample_val", {}, "datasets/xc-sample/annotations/xc-val.json", "datasets/xc-sample/images/val/")
