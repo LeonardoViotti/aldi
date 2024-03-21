@@ -18,6 +18,8 @@ import aldi.datasets # register datasets with Detectron2
 import aldi.rcnn # register ALDI R-CNN model with Detectron2
 import aldi.backbone # register ViT FPN backbone with Detectron2
 
+import time
+
 def setup(args):
     """
     Copied directly from detectron2/tools/train_net.py
@@ -59,6 +61,9 @@ def main(args):
     return trainer.train()
 
 if __name__ == "__main__":
+    # Benchmarking
+    start = time.time()
+    
     args = default_argument_parser().parse_args()
     print("Command Line Args:", args)
     launch(
@@ -70,3 +75,9 @@ if __name__ == "__main__":
         timeout=timedelta(minutes=1), # added for debugging
         args=(args,),
     )
+
+    #---------------------------------------------------------------------------------
+    # Bechnarking
+    end = time.time()
+    total_time = round(end - start)
+    print(f'Total time: {round(total_time/60)}m  {total_time % 60}s ' )
