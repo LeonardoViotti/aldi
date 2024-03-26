@@ -11,5 +11,10 @@ EMA:
   LOAD_FROM_EMA_ON_START: False
 OUTPUT_DIR: "output/xc/xc_strongaug_ema/"
 SOLVER:
+  MAX_ITER: 1
   AMP:
     ENABLED: False
+INPUT:
+  CROP: 
+    ENABLED: False
+  RANDOM_FLIP: 'none'

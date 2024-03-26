@@ -9,7 +9,12 @@ DATASETS:
 EMA:
   ENABLED: True
   LOAD_FROM_EMA_ON_START: False
-OUTPUT_DIR: "output/xc/xc_strongaug_ema/"
+OUTPUT_DIR: "output/xc/xc_ema/"
 SOLVER:
+  MAX_ITER: 30000
   AMP:
     ENABLED: False
+INPUT:
+  CROP: 
+    ENABLED: False
+  RANDOM_FLIP: 'none'
