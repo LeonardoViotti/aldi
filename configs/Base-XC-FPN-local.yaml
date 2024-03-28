@@ -12,6 +12,7 @@ EMA:
   LOAD_FROM_EMA_ON_START: False
 OUTPUT_DIR: "output/xc/xc_local/"
 SOLVER:
+  MAX_ITER: 1
   AMP:
     ENABLED: False
 INPUT:

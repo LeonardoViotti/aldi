@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=aldi-Base-XC
 #SBATCH --output=out/aldi-Base-XC.out
-#SBATCH --time=1-00:00:00
+#SBATCH --time=3-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=10
 #SBATCH --cpus-per-task=1
