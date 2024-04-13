@@ -3,13 +3,13 @@ MODEL:
   ROI_HEADS:
     NUM_CLASSES: 21
 DATASETS:
-  TRAIN: ("xc_sample_train",)
-  TEST: ("xc_sample_val",)
+  TRAIN: ("xc_train",)
+  TEST: ("song9_val",)
   BATCH_CONTENTS: ("labeled_strong", )
 EMA:
   ENABLED: True
   LOAD_FROM_EMA_ON_START: False
-OUTPUT_DIR: "output/xc/xc_strongaug_ema/"
+OUTPUT_DIR: "output/xc/tmp-sample/"
 SOLVER:
   MAX_ITER: 1
   AMP:

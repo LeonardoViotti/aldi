@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=aldi-Base-XC
-#SBATCH --output=out/aldi-Base-XC-v1.out
+#SBATCH --output=out/aldi-Base-XC-v2.out
 #SBATCH --time=3-00:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=10
