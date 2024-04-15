@@ -29,7 +29,7 @@ register_coco_instances("xc_val", {}, "datasets/xc/annotations/xc-val.json", "da
 # Song 9
 register_coco_instances("song9_train", {}, "datasets/song9/annotations/song9-train.json", "datasets/song9/images/train/")
 register_coco_instances("song9_val", {}, "datasets/song9/annotations/song9-val.json", "datasets/song9/images/val/")
-register_coco_instances("song9_test", {}, "datasets/song9/annotations/song9-val.json", "datasets/song9/images/val/")
+register_coco_instances("song9_test", {}, "datasets/song9/annotations/song9-test.json", "datasets/song9/images/test/")
 
 # PNRE
 register_coco_instances("pnre_train", {}, "datasets/pnre/annotations/pnre-train.json", "datasets/pnre/images/train/")

@@ -15,4 +15,4 @@ module load pytorch/2.0.1_cuda11.8 gcc/5.4.0
 
 source activate /bgfs/jkitzes/let110/envs/aldi
 
-python -i tools/train_net.py --config configs/Base-XC-FPN-sample.yaml
+python tools/train_net.py --config configs/Base-XC-FPN-sample.yaml
