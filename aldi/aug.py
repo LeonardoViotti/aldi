@@ -43,13 +43,13 @@ def build_strong_augmentation(include_erasing=True):
         - Use scipy implementation of gaussian blur to avoid converting from PIL to numpy and back
     """
     augs = [
-        T.RandomApply(T.AugmentationList([
-            T.RandomContrast(0.6, 1.4),
-            T.RandomBrightness(0.6, 1.4),
-            T.RandomSaturation(0.6, 1.4),
-        ]), prob=0.8),
-        T.RandomApply(T.RandomSaturation(0, 0), prob=0.2), # Random grayscale
-        T.RandomApply(RandomBlurTransform((0.1, 2.0)), prob=0.5),
+        # T.RandomApply(T.AugmentationList([
+        #     T.RandomContrast(0.6, 1.4),
+        #     T.RandomBrightness(0.6, 1.4),
+        #     T.RandomSaturation(0.6, 1.4),
+        # ]), prob=0.8),
+        # T.RandomApply(T.RandomSaturation(0, 0), prob=0.2), # Random grayscale
+        # T.RandomApply(RandomBlurTransform((0.1, 2.0)), prob=0.5),
     ]
     if include_erasing:
         augs += [
