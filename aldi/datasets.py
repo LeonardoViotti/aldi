@@ -25,7 +25,6 @@ register_coco_instances("cfc_channel_test",   {},         "datasets/cfc/coco_lab
 register_coco_instances("xc_train", {}, "datasets/xc/annotations/xc-train.json", "datasets/xc/images/train/")
 register_coco_instances("xc_val", {}, "datasets/xc/annotations/xc-val.json", "datasets/xc/images/val/")
 
-
 # Song 9
 register_coco_instances("song9_train", {}, "datasets/song9/annotations/song9-train.json", "datasets/song9/images/train/")
 register_coco_instances("song9_val", {}, "datasets/song9/annotations/song9-val.json", "datasets/song9/images/val/")
