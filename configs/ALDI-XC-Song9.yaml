@@ -3,7 +3,6 @@ MODEL:
   WEIGHTS: "/ihome/jkitzes/let110/Github/aldi/output/xc/xc_ema/song9_val_model_best.pth"
   ROI_HEADS:
     NUM_CLASSES: 21
-  DEVICE: "cpu"
 EMA:
   ENABLED: True
 DOMAIN_ADAPT:
