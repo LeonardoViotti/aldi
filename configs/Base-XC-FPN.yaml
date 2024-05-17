@@ -4,7 +4,7 @@ MODEL:
     NUM_CLASSES: 21
 DATASETS:
   TRAIN: ("xc_train",)
-  TEST: ("song9_val",)
+  TEST: ("xc_validation", "song9_val",)
   BATCH_CONTENTS: ("labeled_strong", )
 EMA:
   ENABLED: True
