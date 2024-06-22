@@ -30,7 +30,6 @@ DATASETS:
   BATCH_CONTENTS: ("labeled_strong", "unlabeled_strong")
   BATCH_RATIOS: (1,1)
 SOLVER:
-  STEPS: (14999,)
   BACKWARD_AT_END: False
   MAX_ITER: 17000 # ~32 epochs
   IMS_PER_GPU: 3 # Default is 2

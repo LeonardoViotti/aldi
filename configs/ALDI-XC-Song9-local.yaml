@@ -31,7 +31,6 @@ DATASETS:
   BATCH_CONTENTS: ("labeled_strong", "unlabeled_strong")
   BATCH_RATIOS: (1,1)
 SOLVER:
-  STEPS: (14999,)
   MAX_ITER: 1
   BACKWARD_AT_END: False
 OUTPUT_DIR: "output/aldi-pnre-local/aldi_best/"
