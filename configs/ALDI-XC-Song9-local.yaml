@@ -1,0 +1,36 @@
+_BASE_: "Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "output/xc/xc_local/song9_val_model_best.pth"
+  ROI_HEADS:
+    NUM_CLASSES: 21
+  DEVICE: "cpu"
+EMA:
+  ENABLED: True
+DOMAIN_ADAPT:
+  TEACHER:
+    ENABLED: True
+  DISTILL:
+    HARD_ROIH_CLS_ENABLED: False
+    HARD_ROIH_REG_ENABLED: False
+    HARD_OBJ_ENABLED: False
+    HARD_RPN_REG_ENABLED: False
+    ROIH_CLS_ENABLED: True
+    OBJ_ENABLED: True
+    ROIH_REG_ENABLED: True
+    RPN_REG_ENABLED: True
+    HINT_ENABLED: False
+AUG:
+  LABELED_INCLUDE_RANDOM_ERASING: True
+  UNLABELED_INCLUDE_RANDOM_ERASING: False
+  LABELED_MIC_AUG: False
+  UNLABELED_MIC_AUG: True
+DATASETS:
+  UNLABELED: ("song9_train",)
+  TRAIN: ("xc_train",)
+  TEST: ("song9_val",)
+  BATCH_CONTENTS: ("labeled_strong", "unlabeled_strong")
+  BATCH_RATIOS: (1,1)
+SOLVER:
+  MAX_ITER: 1
+  BACKWARD_AT_END: False
+OUTPUT_DIR: "output/aldi-xc-song9-local/aldi_best/"

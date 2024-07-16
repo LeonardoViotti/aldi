@@ -1,0 +1,37 @@
+_BASE_: "Base-RCNN-FPN.yaml"
+MODEL:
+  WEIGHTS: "/ihome/jkitzes/let110/Github/aldi/output/xc/xc_ema/song9_val_model_best.pth"
+  ROI_HEADS:
+    NUM_CLASSES: 21
+EMA:
+  ENABLED: True
+DOMAIN_ADAPT:
+  TEACHER:
+    ENABLED: True
+  DISTILL:
+    HARD_ROIH_CLS_ENABLED: False
+    HARD_ROIH_REG_ENABLED: False
+    HARD_OBJ_ENABLED: False
+    HARD_RPN_REG_ENABLED: False
+    ROIH_CLS_ENABLED: True
+    OBJ_ENABLED: True
+    ROIH_REG_ENABLED: True
+    RPN_REG_ENABLED: True
+    HINT_ENABLED: False
+AUG:
+  LABELED_INCLUDE_RANDOM_ERASING: True
+  UNLABELED_INCLUDE_RANDOM_ERASING: False
+  LABELED_MIC_AUG: False
+  UNLABELED_MIC_AUG: True
+DATASETS:
+  UNLABELED: ("song9_train",)
+  TRAIN: ("xc_train",)
+  TEST: ("song9_val",)
+  BATCH_CONTENTS: ("labeled_strong", "unlabeled_strong")
+  BATCH_RATIOS: (1,1)
+SOLVER:
+  BACKWARD_AT_END: False
+  MAX_ITER: 17000 # ~32 epochs
+  IMS_PER_GPU: 3 # Default is 2
+  BASE_LR: 0.01
+OUTPUT_DIR: "output/aldi-xc-song9/aldi_best/"

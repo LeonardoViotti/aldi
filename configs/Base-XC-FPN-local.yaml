@@ -1,0 +1,21 @@
+_BASE_: "Base-RCNN-FPN.yaml"
+MODEL:
+  ROI_HEADS:
+    NUM_CLASSES: 21
+  DEVICE: "cpu"
+DATASETS:
+  TRAIN: ("xc_train",)
+  TEST: ("song9_val",)
+  BATCH_CONTENTS: ("labeled_strong", )
+EMA:
+  ENABLED: True
+  LOAD_FROM_EMA_ON_START: False
+OUTPUT_DIR: "output/xc/xc_local/"
+SOLVER:
+  MAX_ITER: 1
+  AMP:
+    ENABLED: False
+INPUT:
+  CROP: 
+    ENABLED: False
+  RANDOM_FLIP: 'none'

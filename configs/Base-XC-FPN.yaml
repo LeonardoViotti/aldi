@@ -1,0 +1,21 @@
+_BASE_: "Base-RCNN-FPN.yaml"
+MODEL:
+  ROI_HEADS:
+    NUM_CLASSES: 21
+DATASETS:
+  TRAIN: ("xc_train",)
+  TEST: ("xc_validation", "song9_val",)
+  BATCH_CONTENTS: ("labeled_strong", )
+EMA:
+  ENABLED: True
+  LOAD_FROM_EMA_ON_START: False
+OUTPUT_DIR: "output/xc/xc_ema/"
+SOLVER:
+  MAX_ITER: 17000 # ~32 epochs
+  IMS_PER_GPU: 3 # Default is 2
+  AMP:
+    ENABLED: False
+INPUT:
+  CROP: 
+    ENABLED: False
+  RANDOM_FLIP: 'none'
